@@ -36,6 +36,7 @@ a {
 
 .menu {
   display: flex;
+  align-items: center;
 }
 
 .menu-list {
