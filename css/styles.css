@@ -4,12 +4,56 @@ body {
   color: #434455;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+.header {
+  border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -20,6 +64,9 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 76px;
 }
 .logo-style {
   color: var(--NAVY-BLUE, #2e2f42);
@@ -28,6 +75,12 @@ a {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
 }
 
 .menu-item {
@@ -39,6 +92,9 @@ a {
 
 .menu-link {
   color: var(--NAVY-BLUE, #2e2f42);
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .menu-link:hover {
@@ -51,6 +107,12 @@ a {
 
 .contacts {
   font-style: normal;
+}
+
+.contacts-list {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
 }
 
 .contacts-item {
@@ -74,6 +136,12 @@ a {
 
 .hero {
   background-color: var(--NAVY-BLUE, #2e2f42);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-container {
+  padding: 188px 0;
 }
 
 .hero-title {
@@ -83,6 +151,9 @@ a {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  margin-bottom: 48px;
+  margin: 0 auto;
+  max-width: 496px;
 }
 
 .hero-button {
@@ -93,6 +164,13 @@ a {
   letter-spacing: 0.04em;
   cursor: pointer;
   background-color: var(--IRIS, #4d5ae5);
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
 }
 
 .hero-button:hover {
@@ -104,12 +182,18 @@ a {
 }
 
 .features {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .features-list {
+  list-style-type: none;
+  display: flex;
+  gap: 24px;
 }
 
 .features-item {
+  width: calc((100% - 4 * 24px) / 4);
 }
 
 .features-title {
@@ -118,6 +202,7 @@ a {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .features-text {
@@ -130,6 +215,8 @@ a {
 
 .team {
   background-color: var(--CLOUD, #f4f4fd);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-title {
@@ -140,16 +227,24 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
+  margin: 0 auto;
+  margin-bottom: 72px;
 }
 
 .team-list {
+  display: flex;
+  list-style-type: none;
+  gap: 24px;
 }
 
 .team-item {
   background-color: var(--WHITE, #fff);
+  width: calc((100% - 3 * 24px) / 4);
+  border-radius: 0 0 4px 4px;
 }
 
-.team-item-image {
+.team-item-title-text {
+  padding: 32px 0;
 }
 
 .team-item-title {
@@ -159,6 +254,7 @@ a {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .team-item-text {
@@ -170,6 +266,8 @@ a {
   letter-spacing: 0.02em;
 }
 .portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .portfolio-title {
@@ -179,9 +277,16 @@ a {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  max-width: 218px;
+  margin: 0 auto;
+  margin-bottom: 72px;
 }
 
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 48px 24px;
 }
 
 .portfolio-item {
@@ -196,7 +301,6 @@ a {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  text-align: center;
   text-transform: capitalize;
 }
 
@@ -207,8 +311,17 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+.portfolio-item-title-text {
+  padding: 32px 16px;
+  border: 1px solid var(--CORNFLOWER, #e7e9fc);
+  border-top: none;
+}
+
 .footer {
   background-color: var(--NAVY-BLUE, #2e2f42);
+  padding-top: 101.5px;
+  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -218,6 +331,10 @@ a {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  max-width: 115px;
+  margin-bottom: 16px;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .footer-text {
   color: var(--CLOUD, #f4f4fd);
@@ -225,4 +342,6 @@ a {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
+  margin-top: 16px;
 }
